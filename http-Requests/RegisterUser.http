@@ -1,0 +1,26 @@
+POST http://localhost:8081/api/users/register
+Content-Type: application/json
+
+{
+  "email": "john@gmail.com",
+  "password": "abc@123",
+  "firstName": "John",
+  "lastName": "Doe"
+}
+###
+
+GET http://localhost:8081/api/users/ff43de5c-37dc-41f4-932b-20cbc7a500e9
+
+###
+PUT http://localhost:8081/api/users/b4ca1291-8d8f-43e2-91ca-78f84ef826b0
+Content-Type: application/json
+
+{
+  "email": "john@gmail.com",
+  "password": "abc@123",
+  "firstName": "JohnY",
+  "lastName": "Doe"
+}
+
+###
+DELETE http://localhost:8081/api/users/ff43de5c-37dc-41f4-932b-20cbc7a500e9

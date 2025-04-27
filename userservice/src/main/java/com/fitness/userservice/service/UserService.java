@@ -11,4 +11,8 @@ public interface UserService {
     UserResponse register(@Valid RegisterRequest request);
 
     UserResponse getUserProfile(String userId);
+
+    UserResponse updateUserProfile(String userId, @Valid RegisterRequest request);
+
+    void deleteUserProfile(String userId);
 }
