@@ -8,6 +8,9 @@ import com.fitness.activityservice.service.ActivityService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+import java.util.stream.Collectors;
+
 @Service
 @RequiredArgsConstructor
 public class ActivityRequestImpl implements ActivityService {
@@ -29,15 +32,25 @@ public class ActivityRequestImpl implements ActivityService {
         return mapToResponse(savedActivity);
         }
 
+    @Override
+    public List<ActivityResponse> getUserActivities(String userId) {
+       List<Activity> activities =  activityRepository.findByUserId(userId);
+       return activities.stream()
+               .map(this::mapToResponse)
+               .collect(Collectors.toList());
+    }
+
     private ActivityResponse mapToResponse(Activity activity) {
         ActivityResponse response = new ActivityResponse();
-         response.setId(activity.getId());
-         response.setUserId(activity.getUserId());
-         response.setType(activity.getType());
-         response.setDuration(activity.getDuration());
-         response.setCaloriesBurned(activity.getCaloriesBurned());
-         response.setStartTime(activity.getStartTime());
-         response.setAdditionalMetrics(activity.getAdditionalMetrics());
+        response.setId(activity.getId());
+        response.setUserId(activity.getUserId());
+        response.setType(activity.getType());
+        response.setDuration(activity.getDuration());
+        response.setCaloriesBurned(activity.getCaloriesBurned());
+        response.setStartTime(activity.getStartTime());
+        response.setAdditionalMetrics(activity.getAdditionalMetrics());
+        response.setCreatedAt(activity.getCreatedAt());
+        response.setUpdatedAt(activity.getUpdatedAt());
          return response;
     }
 }

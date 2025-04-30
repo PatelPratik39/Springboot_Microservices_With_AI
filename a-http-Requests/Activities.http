@@ -4,14 +4,14 @@ Content-Type: application/json
 Accept: application/json
 
 {
-  "userId": 1,
-  "type": "RUNNING",
-  "duration": 30,
-  "distance": 5.0,
-  "caloriesBurned": 300,
-  "startTime": "2025-01-12T10:00:00Z",
+  "userId": 2,
+  "type": "SWIMMING",
+  "duration": 10,
+  "distance": 0.5,
+  "caloriesBurned": 800,
+  "startTime": "2025-02-12T10:00:00Z",
   "additionalMetrics": {
-    "distance": 5.2,
+    "distance": 0.5,
     "averageSpeed": 10.4,
     "maxHeartRate": 165
   }
@@ -19,3 +19,5 @@ Accept: application/json
 
 
 ###
+GET http://localhost:8082/api/activities
+X-User-ID: 2

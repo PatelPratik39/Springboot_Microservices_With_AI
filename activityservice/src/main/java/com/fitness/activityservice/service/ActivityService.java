@@ -4,13 +4,12 @@ import com.fitness.activityservice.dto.ActivityRequest;
 import com.fitness.activityservice.dto.ActivityResponse;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public interface ActivityService {
-    /**
-     * Tracks a user's activity.
-     *
-     * @param activityRequest the activity request containing user and activity details
-     * @return the response containing the tracked activity details
-     */
-    ActivityResponse trackActivity(ActivityRequest activityRequest);
+
+     ActivityResponse trackActivity(ActivityRequest activityRequest);
+
+     List<ActivityResponse> getUserActivities(String userId);
 }
