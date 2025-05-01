@@ -21,3 +21,6 @@ Accept: application/json
 ###
 GET http://localhost:8082/api/activities
 X-User-ID: 2
+
+###
+GET http://localhost:8082/api/activities/68124068a2cde208479a6108

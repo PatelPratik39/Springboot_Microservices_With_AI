@@ -40,6 +40,13 @@ public class ActivityRequestImpl implements ActivityService {
                .collect(Collectors.toList());
     }
 
+    @Override
+    public ActivityResponse getActivityById(String activityId) {
+        return activityRepository.findById(activityId)
+                .map(this::mapToResponse)
+                .orElseThrow(() -> new RuntimeException("Activity not Found with id : " + activityId));
+    }
+
     private ActivityResponse mapToResponse(Activity activity) {
         ActivityResponse response = new ActivityResponse();
         response.setId(activity.getId());
