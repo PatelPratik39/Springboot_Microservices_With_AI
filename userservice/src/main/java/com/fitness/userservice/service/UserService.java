@@ -15,4 +15,6 @@ public interface UserService {
     UserResponse updateUserProfile(String userId, @Valid RegisterRequest request);
 
     void deleteUserProfile(String userId);
+
+    Boolean existByUserId(String userId);
 }

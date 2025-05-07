@@ -2,10 +2,10 @@ POST http://localhost:8081/api/users/register
 Content-Type: application/json
 
 {
-  "email": "john@gmail.com",
-  "password": "abc@123",
-  "firstName": "John",
-  "lastName": "Doe"
+  "email": "Chandu@gmail.com",
+  "password": "chandu@123",
+  "firstName": "Chandu",
+  "lastName": "Champion"
 }
 ###
 
@@ -24,3 +24,7 @@ Content-Type: application/json
 
 ###
 DELETE http://localhost:8081/api/users/ff43de5c-37dc-41f4-932b-20cbc7a500e9
+
+###
+#Validate User
+GET http://localhost:8081/api/users/9fb67485-ae4c-4a46-a730-705c7ab21ae2/validate

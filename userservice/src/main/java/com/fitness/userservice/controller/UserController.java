@@ -30,6 +30,12 @@ public class UserController {
         return ResponseEntity.notFound().build();  // return 404 if user not found
     }
 
+//    Validate User
+    @GetMapping("/{userId}/validate")
+    public ResponseEntity<Boolean> validateUser(@PathVariable String userId){
+        return ResponseEntity.ok(userService.existByUserId(userId));
+    }
+
 //    Update User Profile
      @PutMapping("/{userId}")
     public ResponseEntity<UserResponse> updateUserProfile(@PathVariable String userId, @Valid @RequestBody RegisterRequest request){

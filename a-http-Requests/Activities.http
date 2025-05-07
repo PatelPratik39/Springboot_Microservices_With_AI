@@ -4,7 +4,7 @@ Content-Type: application/json
 Accept: application/json
 
 {
-  "userId": 2,
+  "userId": "9fb67485-ae4c-4a46-a730-705c7ab21ae2",
   "type": "SWIMMING",
   "duration": 10,
   "distance": 0.5,
