@@ -23,7 +23,6 @@ public class ActivityRequestImpl implements ActivityService {
     public ActivityResponse trackActivity(ActivityRequest activityRequest) {
 
         boolean isValidUser = userValidationService.validateUser(activityRequest.getUserId());
-
         if(!isValidUser) {
             throw new RuntimeException("Invalid user : " + activityRequest.getUserId());
         }
