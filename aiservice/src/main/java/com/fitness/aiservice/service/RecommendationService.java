@@ -9,5 +9,5 @@ import java.util.List;
 public interface RecommendationService {
     List<Recommendation> getUserRecommendations(String userId);
 
-    List<Recommendation> getActivityRecommendations(String activityId);
+    Recommendation getActivityRecommendations(String activityId);
 }
