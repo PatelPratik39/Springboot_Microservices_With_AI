@@ -6,14 +6,14 @@ Accept: application/json
 {
   "userId": "9fb67485-ae4c-4a46-a730-705c7ab21ae2",
   "type": "SWIMMING",
-  "duration": 10,
-  "distance": 0.5,
-  "caloriesBurned": 800,
-  "startTime": "2025-02-12T10:00:00Z",
+  "duration": 20,
+  "distance": 0.8,
+  "caloriesBurned": 1800,
+  "startTime": "2025-03-12T10:00:00Z",
   "additionalMetrics": {
-    "distance": 0.5,
-    "averageSpeed": 10.4,
-    "maxHeartRate": 165
+    "distance": 0.8,
+    "averageSpeed": 5.3,
+    "maxHeartRate": 170
   }
 }
 
