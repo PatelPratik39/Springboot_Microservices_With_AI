@@ -5,6 +5,17 @@ spring:
     mongodb:
       uri: mongodb://localhost/fitnessrecommondation
       database: fitnessrecommondation
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+custom:
+  rabbitmq:
+    exchange:
+      name: fitness.exchange
+    routing:
+      key: activity.tracking
 server:
   port: 8083
 
