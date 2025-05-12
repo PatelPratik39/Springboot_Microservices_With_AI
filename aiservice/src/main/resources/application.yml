@@ -1,21 +1,20 @@
 spring:
   application:
     name: aiservice
+
   data:
     mongodb:
-      uri: mongodb://localhost/fitnessrecommondation
-      database: fitnessrecommondation
+      uri: mongodb://localhost:27017/fitnessrecommondation
+
   rabbitmq:
     host: localhost
     port: 5672
     username: guest
     password: guest
-custom:
-  rabbitmq:
-    exchange:
-      name: fitness.exchange
-    routing:
-      key: activity.tracking
+    listener:
+      simple:
+        default-requeue-rejected: false  # Optional: avoids infinite retry loop
+
 server:
   port: 8083
 
@@ -23,3 +22,15 @@ eureka:
   client:
     service-url:
       defaultZone: http://localhost:8761/eureka/
+
+gemini:
+  api:
+    url: ${GEMINI_API_URL}
+    key: ${GEMINI_API_KEY}
+
+custom:
+  rabbitmq:
+    exchange:
+      name: fitness.exchange
+    routing:
+      key: activity.tracking

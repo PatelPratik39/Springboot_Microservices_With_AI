@@ -4,11 +4,11 @@ Content-Type: application/json
 Accept: application/json
 
 {
-  "userId": "9fb67485-ae4c-4a46-a730-705c7ab21ae2",
-  "type": "SWIMMING",
+  "userId": "89852dfd-d526-4521-bfba-78a96bcfc865",
+  "type": "RUNNING",
   "duration": 20,
   "distance": 0.8,
-  "caloriesBurned": 1800,
+  "caloriesBurned": 2800,
   "startTime": "2025-03-12T10:00:00Z",
   "additionalMetrics": {
     "distance": 0.8,
